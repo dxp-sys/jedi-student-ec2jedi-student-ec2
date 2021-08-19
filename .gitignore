@@ -1,0 +1,20 @@
+# files
+*.tfstate
+*.tfstate.backup
+*.log
+
+# directory
+.terraform/
+terraform.tfstate.d/
+
+# temp file
+temp/*
+.bk
+
+# local only file
+kubeconfig_*
+local_memo.md
+
+# for mac
+.DS_Store
+

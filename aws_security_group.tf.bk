@@ -1,0 +1,22 @@
+# SecurtyGroup
+module "security_group_ec2_win" {
+  source  = "terraform-aws-modules/security-group/aws"
+  version = "4.2.0"
+
+  name        = "${var.ec2_securty_group.name_prefix}-WIN"
+  description = "Security group for EC2 Windows RDP"
+  vpc_id      = var.vpc_id
+
+  ingress_cidr_blocks = var.ec2_securty_group.ingress_cidr_blocks
+  ingress_rules = [
+    "rdp-tcp"
+  ]
+  egress_rules = [
+    "all-all"
+  ]
+
+  tags = {
+    project = var.project_name
+    env     = var.env_name
+  }
+}
