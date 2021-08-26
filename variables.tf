@@ -23,7 +23,10 @@ variable "region" {
 variable "subnets" {
   description = "List of subnet IDs to use"
   type        = list(string)
-  default     = ["subnet-06d304f09f21ae5eb"]
+  # ap-northeast-1a
+  # default     = ["subnet-06d304f09f21ae5eb"]
+  # ap-northeast-1c
+  default     = ["subnet-00ff8b893a540fa5f"]
 }
 
 variable "vpc_security_group_ids" {
@@ -34,10 +37,10 @@ variable "vpc_security_group_ids" {
 
 variable "ec2_win" {
   default = {
-    name_prefix = "JEDI-Advanced-CONT"
+    name_prefix = "JEDI-Advanced-Container"
     ami         = "ami-076ff374bb05d7124"
     instance = {
-      type = "t3a.medium"
+      type = "t2.medium"
     }
     root_block_device = [
       {
@@ -60,6 +63,39 @@ variable "ec2_win_list" {
     "J73687" = {}
     # 福島
     "J35286" = {}
+    # 矢島
+    "J76554" = {}
+    # 山崎
+    "J35414" = {}
+    # 小河原
+    "J70971" = {}
+    # 神
+    "J74233" = {}
   }
 }
 
+/*
+    # -- 生徒 --
+    # 鈴木隆寛
+    "J32704" = {}
+    # 中南拓也
+    "J35767" = {}
+    # 野中麻未
+    "J32479" = {}
+    # 田中啓之
+    "J35987" = {}
+    # 松本　賢哉
+    "J68292" = {}
+    # 牧内 信吾
+    "J32200" = {}
+    # 木村龍一
+    "J69922" = {}
+    # 濱川次郎
+    "J34227" = {}
+    # 園田 慎二
+    "J33005" = {}
+    # 涌井 豪太
+    "J31747" = {}
+    # 下畑隆行
+    "J32988" = {}
+*/
