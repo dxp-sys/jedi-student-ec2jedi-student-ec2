@@ -34,15 +34,17 @@ variable "vpc_security_group_ids" {
 
 variable "ec2_win" {
   default = {
-    name_prefix = "JEDI-Advanced-CONT"
-    ami         = "ami-076ff374bb05d7124"
+    name_prefix = "JEDI-2021-5"
+    # ami         = "ami-076ff374bb05d7124"
+    ami = "ami-036ab2d7c91582af4"
     instance = {
-      type = "t3a.medium"
+      # type = "t3a.medium"
+      type = "t2.medium"
     }
     root_block_device = [
       {
         volume_type = "gp3"
-        volume_size = 50
+        volume_size = 100
         tags = {
           Name = "root-block"
         }
@@ -60,6 +62,36 @@ variable "ec2_win_list" {
     "J73687" = {}
     # 福島
     "J35286" = {}
+    # 矢嶋
+    "J76554" = {}
+    # 山﨑
+    "J35414" = {}
+    # 小河原
+    "J74233" = {}
+    # 神
+    "J70971" = {}
+    # 伊藤航
+    "J35316" = {}
+    # 塚本朱音
+    "J35782" = {}
+    # 江利角 昌巳
+    "J32935" = {}
+    # 堀江 政宏
+    "J32895" = {}
+    # 渡邉 良太
+    "J34569" = {}
+    # 森田 康介
+    "J34572" = {}
+    # 秋本 昂岐
+    "J35738" = {}
+    # 遠藤 祥史
+    "J31974" = {}
+    # 徳田 一樹
+    "J32569" = {}
+    # 小宮 泰斗
+    "J35315" = {}
+    # 島倉 舜
+    "J36016" = {}
   }
 }
 
