@@ -50,7 +50,7 @@ variable "ec2_win" {
         }
       },
     ]
-    disable_api_termination = false
+    disable_api_termination = true
   }
 }
 
