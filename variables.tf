@@ -51,7 +51,7 @@ variable "ec2_win" {
         }
       },
     ]
-    disable_api_termination = false
+    disable_api_termination = true
   }
 }
 
@@ -71,10 +71,6 @@ variable "ec2_win_list" {
     "J70971" = {}
     # 神
     "J74233" = {}
-  }
-}
-
-/*
     # -- 生徒 --
     # 鈴木隆寛
     "J32704" = {}
@@ -98,4 +94,5 @@ variable "ec2_win_list" {
     "J31747" = {}
     # 下畑隆行
     "J32988" = {}
-*/
+  }
+}
