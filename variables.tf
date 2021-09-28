@@ -10,7 +10,7 @@ variable "project_name" {
 variable "env_name" {
   description = "環境名（本番、テスト、開発 等）。すべてのリソースのタグやにセットされる。"
   type        = string
-  default     = "advanced"
+  default     = "5th"
 }
 
 variable "region" {
@@ -34,21 +34,21 @@ variable "vpc_security_group_ids" {
 
 variable "ec2_win" {
   default = {
-    name_prefix = "JEDI-Advanced-CONT"
-    ami         = "ami-076ff374bb05d7124"
+    name_prefix = "JEDI-2021-5"
+    ami         = "ami-0956d5df8337c5891"
     instance = {
-      type = "t3a.medium"
+      type = "t3.xlarge"
     }
     root_block_device = [
       {
         volume_type = "gp3"
-        volume_size = 50
+        volume_size = 100
         tags = {
           Name = "root-block"
         }
       },
     ]
-    disable_api_termination = false
+    disable_api_termination = true
   }
 }
 
@@ -58,8 +58,23 @@ variable "ec2_win_list" {
   default = {
     # 藤井
     "J73687" = {}
-    # 福島
-    "J35286" = {}
+
+    # 堀江 政宏
+    "J32895" = {}
+    # 渡邉 良太
+    "J34569" = {}
+    # 森田 康介
+    "J34572" = {}
+    # 秋本 昂岐
+    "J35738" = {}
+    # 遠藤 祥史
+    "J31974" = {}
+    # 徳田 一樹
+    "J32569" = {}
+    # 小宮 泰斗
+    "J35315" = {}
+    # 島倉 舜
+    "J36016" = {}
   }
 }
 

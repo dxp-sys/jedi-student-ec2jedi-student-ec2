@@ -13,7 +13,7 @@ terraform {
   backend "s3" {
     # [TODO] 自身の環境にあわせて変更
     bucket = "jbgr-jedi-2-terraform-backend"
-    key    = "jedi-advanced-cont-ec2-win"
+    key    = "jedi-5th-infra-ec2-win"
     region = "ap-northeast-1"
   }
   # --------------------------------------------------------------------
